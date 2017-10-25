@@ -1,18 +1,39 @@
 package orderSystem;
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
-public class OrderSumTest extends TestCase {
-    public OrderSumTest( String testName ) {
-        super( testName );
-    }
+import static org.junit.Assert.*;
 
-    public static Test suite() {
-        return new TestSuite( OrderSumTest.class );
-    }
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-    public void testApp()    {
-        assertTrue( true );
-    }
+public class OrderSumTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void testDonutSum() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testPieSum() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCokeSum() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testOrderSum() {
+		fail("Not yet implemented");
+	}
+
 }

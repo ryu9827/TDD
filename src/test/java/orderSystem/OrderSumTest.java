@@ -1,39 +1,40 @@
 package orderSystem;
 
+import junit.framework.TestCase;
 import static org.junit.Assert.*;
+public class OrderSumTest extends TestCase {
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-public class OrderSumTest {
-
-	@Before
-	public void setUp() throws Exception {
+	OrderSum obj;
+	int numDonut, numPie, numCoke;
+	
+	protected void setUp() throws Exception {
+		numDonut = 1;
+		numPie = 1;
+		numCoke = 1;
+		obj = new OrderSum();
 	}
 
-	@After
-	public void tearDown() throws Exception {
-	}
-
-	@Test
 	public void testDonutSum() {
-		fail("Not yet implemented");
+		assertEquals(0.99, obj.donutSum(numDonut));
 	}
 
-	@Test
 	public void testPieSum() {
-		fail("Not yet implemented");
+		assertEquals(3.49, obj.pieSum(numPie));
 	}
 
-	@Test
 	public void testCokeSum() {
-		fail("Not yet implemented");
+		assertEquals(1.99, obj.cokeSum(numCoke));
 	}
 
-	@Test
 	public void testOrderSum() {
-		fail("Not yet implemented");
+		assertEquals((double)6.47, obj.donutSum(numDonut) + obj.pieSum(numDonut) + obj.cokeSum(numDonut), 0.01);
+	}
+	
+	protected void tearDown() throws Exception {
+		numDonut = 0;
+		numPie = 0;
+		numCoke = 0;
+		obj = null;
 	}
 
 }
